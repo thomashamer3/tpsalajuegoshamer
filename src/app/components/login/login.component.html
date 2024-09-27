@@ -1,0 +1,31 @@
+<div class="container-fluid vh-100 m-0 p-0">
+    <div class="row justify-content-center align-items-top h-100 form-container">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Ingrese Su Usuario</h1>
+                    <br>
+                    <form [formGroup]="loginForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+                        </div>
+                        <div class="login-btns">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success btn-block" (click)="login()">Iniciar Sesión</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-dark btn-block" (click)="logeoRapido()">Inicio de sesión rápido</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary btn-block" (click)="irRegistro()">Registrarse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

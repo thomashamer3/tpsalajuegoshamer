@@ -1,0 +1,29 @@
+<div class="background-image">
+    <div class="container">
+      <div class="card text-center flip-in-hor-top">
+        <img class="card-img-top mx-auto" [src]="perfil?.avatar_url" />
+        <div class="card-body">
+          <h4 class="card-title">{{ perfil?.name }}</h4>
+          <p class="card-subtitle">{{ perfil?.location }}</p>
+          <p class="card-text">{{ perfil?.bio }}</p>
+          <p>
+            <a
+              class="link-offset-2 link-underline link-underline-opacity-0 link"
+              [href]="perfil?.html_url"
+              >Github</a
+            >
+          </p>
+          <br />
+          <p class="card-title">A Calcular</p>
+          <p class="card-text">
+            El Juego <span>"A Calcular"</span> es un juego para mejorar
+            tus habilidades matemáticas. Resuelve cálculos en un tiempo limitado;
+            suma puntos por respuestas correctas. El objetivo es desarrollar el
+            pensamiento crítico y la agilidad mental, superando tus propios
+            récords o compitiendo con amigos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

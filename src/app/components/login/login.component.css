@@ -1,0 +1,40 @@
+.container-fluid {
+    background-color: black;
+    background-image: url('../../../../public/fondoUno.gif'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 1%;
+}
+
+.form-container{
+    margin-top: 5em;
+    justify-content: center;
+}
+
+.form-container input {
+    margin-bottom: 1em;
+}
+
+.card-body{
+    padding: 2em;
+}
+
+.login-btns{
+    text-align: center;
+}
+
+h1{
+    margin-top: 1em;
+}
+
+button{
+    margin-top: 1em;
+}
+
+
+
