@@ -1,0 +1,29 @@
+header {
+  background-color: rgba(216, 34, 80, 0.3);
+  color: #fff;
+}
+
+.btn-menu {
+  background-color: #fff;
+}
+
+.icon-arrow-left {
+  font-size: 2.5rem;
+  color: rgb(12, 50, 90);
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav-item {
+  margin-left: 1em;
+  color: #fff;
+}
+
+.btn-nav-end {
+  margin-left: 1em;
+  margin-right: 1em;
+}

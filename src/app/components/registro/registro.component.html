@@ -1,1 +1,44 @@
-<p>registro works!</p>
+<div class="container-fluid vh-100 m-0 p-0">
+    <div class="row justify-content-center align-items-top h-100 form-container">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Registre su Usuario</h1>
+                    <br>
+                    <form [formGroup]="registerForm" (ngSubmit)="createUser()">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                          @if(fc['email'].invalid && (fc['email'].dirty || fc['email'].touched)){
+                            <div class="text-danger bg-dark">
+                              @if(fc['email'].errors?.['required']){
+                                  <div>El Correo Electrónico es Obligatorio.</div>
+                              }
+                              @if(fc['email'].errors?.['email']){
+                                  <div>El Correo Electrónico No es Válido.</div>
+                              }
+                            </div>
+                          }
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+                          @if(fc['password'].invalid && (fc['password'].dirty || fc['password'].touched)){
+                                <div class="text-danger bg-dark">
+                                  La Contraseña Debe Contener al Menos 8 Caracteres.
+                                </div>
+                            }
+                        </div>
+                        <div class="login-btns">
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block" [disabled]="registerForm.invalid">Crear Cuenta</button>
+                          </div>
+                          <div class="form-group">
+                            <button type="button" class="btn btn-success btn-block" (click)="router.navigateByUrl('/login')">Volver al Login</button>
+                        </div>
+                        </div>
+                      </form>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

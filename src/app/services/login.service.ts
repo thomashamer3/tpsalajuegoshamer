@@ -40,14 +40,14 @@ export class LoginService {
       .then((res) => {
         if (res.user.email != null) {
           this.setLoggedUser(res.user.email);
-          this.toast.success(`Bienvenido Nuevamente ${res.user.email}`);
+          this.toast.success(`Nos alegra verte de nuevo ${res.user.email}`);
           this.router.navigateByUrl('/home');
         }
       })
       .catch((error) => {
         switch (error.code) {
           case 'auth/invalid-credential':
-            this.toast.error('Usuario Inexistente');
+            this.toast.error('Usuario inexistente');
             break;
           default:
             this.toast.error('Sucedió un error al intentar loguearse');

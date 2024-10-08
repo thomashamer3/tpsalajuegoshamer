@@ -1,0 +1,57 @@
+<header class="app-header navbar mian-nav">
+  <div class="d-flex align-items-center">
+    <div class="d-none d-md-flex btn-nav-end">
+      <button class="navbar-toggler btn-menu" type="button" (click)="goBack()">
+        <fa-icon [icon]="faHome" class="font-xs"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item">
+      <a
+        class="nav-link text-white"
+        (click)="redirectTo('quien-soy')"
+        tooltip="¿Quién Soy?"
+        placement="bottom"
+        container="body"
+      >
+        ¿Quién Soy?
+      </a>
+    </li>
+    
+
+    <li class="nav-item">
+      @if(currentUser){
+      <div class="d-flex align-items-center ml-3">
+        <div class="mr-3">
+          <small class="d-block">Email: {{ currentUser.email }}</small>
+        </div>
+      </div>
+      }
+    </li>
+
+    <li class="nav-item">
+      @if(currentUser){
+      <div class="d-flex align-items-center ml-3">
+        <div class="mr-3">
+          <span tooltip="Mi Perfil" placement="bottom" container="body">
+            <fa-icon [icon]="faUser" class="font-xs"></fa-icon>
+          </span>
+        </div>
+        <div class="btn-nav-end">
+          <a
+            class="btn btn-outline-danger rounded-circle"
+            href="#"
+            (click)="logOut()"
+            tooltip="Cerrar Sesión"
+            placement="bottom"
+            container="body"
+          >
+            <fa-icon [icon]="faRightFromBracket" class="font-xs"></fa-icon>
+          </a>
+        </div>
+      </div>
+      }
+    </li>
+  </ul>
+</header>

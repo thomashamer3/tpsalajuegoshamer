@@ -3,7 +3,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="card-title">Ingrese Su Usuario</h1>
+                    <h1 class="card-title" style="background-color: #d82250; color: white; padding: 10px; border-radius: 5px;">
+                        Ingrese Su Usuario
+                      </h1>                      
                     <br>
                     <form [formGroup]="loginForm">
                         <div class="form-group">
@@ -17,7 +19,7 @@
                                 <button type="button" class="btn btn-success btn-block" (click)="login()">Iniciar Sesión</button>
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-dark btn-block" (click)="logeoRapido()">Inicio de sesión rápido</button>
+                                <button type="button" class="btn btn-dark btn-block" (click)="logeoRapido()">Inicio de Sesión Rápido</button>
                             </div>
                             <div class="form-group">
                                 <button type="button" class="btn btn-primary btn-block" (click)="irRegistro()">Registrarse</button>

@@ -44,8 +44,8 @@ export class LoginComponent {
   }
 
   logeoRapido() {
-    this.loginForm.controls['email'].setValue('test@gmail.com');
-    this.loginForm.controls['password'].setValue('testtest');
+    this.loginForm.controls['email'].setValue('usuariorapido@gmail.com');
+    this.loginForm.controls['password'].setValue('usuariorapido');
   }
 
   irRegistro = () => this.router.navigateByUrl('/registro');
