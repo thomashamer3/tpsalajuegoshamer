@@ -1,0 +1,45 @@
+<app-header (sendCurrentUser)="handleSetUser($event)"></app-header>
+<div class="main">
+  <div class="container text-center justify-content-center align-items-center">
+    <div class="title">
+      <h1>Sala de Chat</h1>
+    </div>
+    @if(!loading){
+    <div class="container screen">
+      <ul class="list-group">
+        @for(msj of messages; track msj){ @if(itsMe(msj)){
+        <li class="list-group-item text-start chat-bubble-me">
+          {{ msj.content }}
+          <span class="chat-date">{{ formatDate(msj.fecha) }}</span>
+          <span class="chat-bubble-triangle"></span>
+        </li>
+        }@else{
+        <li class="list-group-item text-end chat-bubble-other">
+          <h6>{{ setChatNickName(msj.sender.email) }}</h6>
+          {{ msj.content }}
+          <span class="chat-date">{{ formatDate(msj.fecha) }}</span>
+          <span class="chat-bubble-triangle"></span>
+        </li>
+        } }
+      </ul>
+    </div>
+
+    <div class="input-group mt-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Escribe tu mensaje..."
+        [(ngModel)]="newMessage"
+        (keydown.enter)="sendMessage()"
+      />
+      <button
+        class="btn btn-primary"
+        [disabled]="!newMessage.trim()"
+        (click)="sendMessage()"
+      >
+        Enviar
+      </button>
+    </div>
+    }
+  </div>
+</div>

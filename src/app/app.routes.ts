@@ -28,6 +28,34 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'chat',
+    loadComponent: () =>
+      import('./components/chat/chat.component').then(
+        (m) => m.ChatComponent
+      ),
+  },
+  {
+    path: 'puntaje',
+    loadComponent: () =>
+      import('./components/puntaje/puntaje.component').then(
+        (m) => m.PuntajeComponent
+      ),
+  },
+  {
+    path: 'ahorcado',
+    loadComponent: () =>
+      import('./components/ahorcado/ahorcado.component').then(
+        (m) => m.AhorcadoComponent
+      ),
+  },
+  {
+    path: 'mayor-menor',
+    loadComponent: () =>
+      import('./components/mayor-menor/mayor-menor.component').then(
+        (m) => m.MayorMenorComponent
+      ),
+  },
+  {
     path: '',
     loadComponent: () =>
       import('./components/login/login.component').then(

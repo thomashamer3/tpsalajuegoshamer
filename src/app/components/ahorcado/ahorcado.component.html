@@ -1,0 +1,57 @@
+<app-header (sendCurrentUser)="handleSetUser($event)"></app-header>
+
+<div class="main">
+  <div class="container text-center justify-content-center align-items-center">
+    <div class="title">
+      <h1>Ahorcado</h1>
+      <br /><br />
+      <div class="muñeco">
+        @if(intentosFallidos == 1 || intentosFallidos >= 1){
+        <div class="cabeza"></div>
+        } @if(intentosFallidos == 2 || intentosFallidos >= 2){
+        <div class="cuerpo"></div>
+        } @if(intentosFallidos == 3 || intentosFallidos >= 3){
+        <div class="brazo-izquierdo"></div>
+        } @if(intentosFallidos == 4 || intentosFallidos >= 4){
+        <div class="brazo-derecho"></div>
+        } @if(intentosFallidos == 5 || intentosFallidos >= 5){
+        <div class="pierna-izquierda"></div>
+        } @if(intentosFallidos == 6 || intentosFallidos >= 6){
+        <div class="pierna-derecha"></div>
+        }
+      </div>
+    </div>
+
+    <div class="palabra-oculta">
+      @for(letra of palabraOculta; track letra){
+      <span class="letter-to-guess">
+        @if(letraYaSeleccionada(letra)){
+        <span>{{ letra }}</span>
+        } @if(!letraYaSeleccionada(letra)){
+        <span>_</span>
+        }
+      </span>
+      }
+    </div>
+    <br />
+    <div class="abecedario">
+      @for(letra of abecedario; track letra){
+      <button
+        class="letter-to-choose btn btn-dark"
+        [disabled]="letraYaSeleccionada(letra)"
+        (click)="seleccionarLetra(letra)"
+      >
+        {{ letra }}
+      </button>
+      }
+    </div>
+    <br />
+    <div class="intentos">
+      <h4>Intentos Fallidos: {{ intentosFallidos }}</h4>
+    </div>
+    <br />
+    @if(showPlayAgain){
+    <button class="btn btn-danger" (click)="playAgain()">Play Again</button>
+    }
+  </div>
+</div>
