@@ -1,7 +1,11 @@
-.main{
-    height: 80vh;
-    background-color: rgba(216, 34, 80, 0.3);
-}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: rgba(216, 34, 80, 0.7);
+  }
+  
 
 .title{
     margin-bottom: 2rem;
@@ -13,8 +17,8 @@
 
 .juego {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto; 
+    max-width: 700px;
+    margin: auto; 
   }
   
 
@@ -23,11 +27,11 @@
 }
 
 .card-header, .card-footer{
-    font-size: 44px;
+    font-size: 45px;
 }
 
 @media (max-width: 1300px) {
     .main{
-        height: 100vh;
+        height: 120vh;
     }
 }

@@ -11,7 +11,7 @@
     <div class="juego mx-auto">
       <div
         class="card border-dark mb-3 mx-auto"
-        style="max-width: 12rem; min-height: 18rem"
+        style="max-width: 18rem; min-height: 18rem"
       >
         <div class="card-header">
           <span class="text-start">{{ getPalo() }}</span>
@@ -49,7 +49,6 @@
       <h4>Puntos Acumulados: {{ puntos }}</h4>
       <h4>Vidas: {{ vidas }}</h4>
     </div>
-    <br />
     @if(showPlayAgain){
     <button class="btn btn-danger" (click)="playAgain()">
       Volver A Intentar
