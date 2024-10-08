@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 50;
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    transparent 10%,
+    rgba(208, 228, 33, 0.5) 50%,
+    rgb(156, 39, 104) 95%
+  );
+}
+.container {
+  padding-top: 12rem;
+  padding-bottom: 2rem;
+}
+.letter-to-guess,
+.letter-to-choose {
+  font-size: 3rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .letter-to-guess,
+  .letter-to-choose {
+    font-size: 3rem;
+  }
+}
+
+.muñeco {
+  position: absolute;
+  display: inline-block;
+  margin-left: 250px;
+}
+
+.cabeza,
+.cuerpo,
+.brazo-izquierdo,
+.brazo-derecho,
+.pierna-izquierda,
+.pierna-derecha {
+  position: absolute;
+  background-color: #000;
+}
+
+.cabeza {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cuerpo {
+  width: 10px;
+  height: 60px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.brazo-izquierdo {
+  width: 60px;
+  height: 10px;
+  top: 20px;
+  left: -10px;
+  transform: rotate(55deg);
+}
+
+.brazo-derecho {
+  width: 60px;
+  height: 10px;
+  top: 20px;
+  right: -10px;
+  transform: rotate(-55deg);
+}
+
+.pierna-izquierda {
+  width: 60px;
+  height: 10px;
+  top: 80px;
+  left: -20px;
+  transform: rotate(65deg);
+}
+
+.pierna-derecha {
+  width: 60px;
+  height: 10px;
+  top: 80px;
+  right: -20px;
+  transform: rotate(-65deg);
+}

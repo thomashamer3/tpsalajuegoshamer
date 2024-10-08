@@ -1,0 +1,33 @@
+.main{
+    height: 80vh;
+    background-color: rgba(216, 34, 80, 0.3);
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.container{
+    padding-top: 2rem;
+}
+
+.juego {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; 
+  }
+  
+
+.card-title{
+    font-size: 125px;
+}
+
+.card-header, .card-footer{
+    font-size: 44px;
+}
+
+@media (max-width: 1300px) {
+    .main{
+        height: 100vh;
+    }
+}
