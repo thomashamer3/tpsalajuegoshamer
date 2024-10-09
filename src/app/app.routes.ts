@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
-
+import { AuthGuard } from './guards/auth.guard';
 export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
       import('./components/home/home.component').then((m) => m.HomeComponent),
+    canActivate: [AuthGuard],
   },
   {
     path: 'login',
@@ -26,20 +27,13 @@ export const routes: Routes = [
       import('./components/quien-soy/quien-soy.component').then(
         (m) => m.QuienSoyComponent
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'chat',
     loadComponent: () =>
-      import('./components/chat/chat.component').then(
-        (m) => m.ChatComponent
-      ),
-  },
-  {
-    path: 'puntaje',
-    loadComponent: () =>
-      import('./components/puntaje/puntaje.component').then(
-        (m) => m.PuntajeComponent
-      ),
+      import('./components/chat/chat.component').then((m) => m.ChatComponent),
+    canActivate: [AuthGuard],
   },
   {
     path: 'ahorcado',
@@ -47,6 +41,23 @@ export const routes: Routes = [
       import('./components/ahorcado/ahorcado.component').then(
         (m) => m.AhorcadoComponent
       ),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'preguntados',
+    loadComponent: () =>
+      import('./components/preguntados/preguntados.component').then(
+        (m) => m.PreguntadosComponent
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'juego-propio',
+    loadComponent: () =>
+      import('./components/juego-propio/juego-propio.component').then(
+        (m) => m.JuegoPropioComponent
+      ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'mayor-menor',
@@ -54,6 +65,7 @@ export const routes: Routes = [
       import('./components/mayor-menor/mayor-menor.component').then(
         (m) => m.MayorMenorComponent
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: '',

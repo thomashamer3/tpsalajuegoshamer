@@ -1,0 +1,49 @@
+<app-header (sendCurrentUser)="handleSetUser($event)"></app-header>
+<div class="main">
+  <div class="container text-center justify-content-center align-items-center">
+    <div class="title">
+      <h1>Preguntados Paises</h1>
+      <br />
+      <h2>¿Qué Bandera Corresponde a {{ paisActual.name }}?</h2>
+    </div>
+
+    <div class="juego mx-auto">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        @for(pais of ochoPaises; track pais) {
+        <div class="col">
+          <div
+            class="card border-0 mb-3"
+            style="width: 14em; min-height: 10rem"
+          >
+            <img
+              src="{{ pais?.flag }}"
+              class="card-img-top"
+              alt="country flag"
+              class="bandera"
+            />
+            <br />
+            <button
+              class="btn btn-primary"
+              (click)="checkAnswer(pais)"
+              [disabled]="showPlayAgain"
+            >
+              Esta!
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    <br />
+    <div class="intentos">
+      <h4>Puntos acumulados: {{ puntos }}</h4>
+      <h4>Vidas: {{ vidas }}</h4>
+    </div>
+    <br />
+    @if(showPlayAgain){
+    <button class="btn btn-danger" (click)="playAgain()">
+      Volver a Intentar
+    </button>
+    }
+  </div>
+</div>

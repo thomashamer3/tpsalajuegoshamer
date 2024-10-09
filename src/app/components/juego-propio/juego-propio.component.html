@@ -1,0 +1,47 @@
+<app-header (sendCurrentUser)="handleSetUser($event)"></app-header>
+
+<div class="main">
+  <div class="container text-center justify-content-center align-items-center">
+    <div class="title">
+      <h1>A Calcular</h1>
+      <br /><br />
+      <div class="operacion">
+        <h2>{{ currentOperation }}</h2>
+      </div>
+    </div>
+
+    <div class="respuesta">
+      <input
+        type="text"
+        [(ngModel)]="userResponse"
+        placeholder="Escribe tu respuesta"
+        class="form-control"
+      />
+    </div>
+    <br />
+    <div class="numeros-seleccionables">
+      @for(numero of numerosSeleccionables; track numero) {
+      <button class="btn btn-dark numero-btn" (click)="seleccionar(numero)">
+        {{ numero }}
+      </button>
+      }
+      <button class="btn btn-danger" (click)="onBorrarClick()">Borrar</button>
+    </div>
+    <br />
+    <div class="intentos">
+      <h2>Tiempo Restante: {{ timeLeft }} segundos</h2>
+    </div>
+    <br />
+    @if(isGameStarted) {
+    <button class="btn btn-success enviar-btn" (click)="onCheckAnswer()">
+      Enviar Respuesta
+    </button>
+    } @else {
+    <button class="btn btn-primary" (click)="comenzar()">Comenzar Juego</button>
+    } @if(puntos > 0) {
+    <div class="puntos">
+      <h2>Puntos: {{ puntos }}</h2>
+    </div>
+    }
+  </div>
+</div>

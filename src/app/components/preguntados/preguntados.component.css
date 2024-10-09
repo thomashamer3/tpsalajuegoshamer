@@ -1,8 +1,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
   background-image: linear-gradient(
     to top,
     transparent 10%,
@@ -11,33 +12,24 @@
   );
 }
 .intentos {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: white;
-  text-align: center
+  text-align: center;
 }
 .title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: white;
   text-align: center;
 }
 
-.container {
-  padding-top: 2rem;
+.bandera {
+  width: 12em;
+  height: 7em;
 }
 
-.juego {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-}
-
-.card-title {
-  font-size: 125px;
-}
-
-.card-header,
-.card-footer {
-  font-size: 45px;
+.card {
+  padding: 1em;
+  background-color: black;
 }
 
 @media (max-width: 1300px) {

@@ -15,7 +15,7 @@ export class AhorcadoComponent {
   palabraOculta = '';
   letrasSeleccionadas: string[] = [];
   intentosFallidos = 0;
-  puntos = 0;
+  puntos: number = 0;
   showPlayAgain = false;
   palabras: string[] = [
     'murcielago',

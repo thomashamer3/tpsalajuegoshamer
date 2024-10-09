@@ -5,7 +5,14 @@ body {
   padding: 50;
   box-sizing: border-box;
 }
-
+.title {
+  color: white;
+  text-align: center;
+}
+.intentos {
+  color: white;
+  text-align: center;
+}
 .main {
   min-height: 100vh;
   background-image: linear-gradient(

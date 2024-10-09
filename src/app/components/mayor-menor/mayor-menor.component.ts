@@ -14,11 +14,10 @@ import { PuntosService } from '../../services/puntos.service';
 export class MayorMenorComponent implements OnInit {
   @Input() currentUser: any;
   puntos: number = 0;
-
   cartas: Cartas[] = [];
   cartaActual: Cartas = { numero: 0, palo: '' };
   siguienteCarta: Cartas = { numero: 0, palo: '' };
-  vidas = 3;
+  vidas = 5;
   showPlayAgain: boolean = false;
 
   constructor(
